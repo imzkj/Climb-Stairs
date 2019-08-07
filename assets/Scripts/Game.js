@@ -78,11 +78,11 @@ cc.Class({
 
     playerMoveLeft: function() {
         //角色跳跃的效果
-        var goL1 = cc.moveTo(this.moveDuration2,cc.p(this.player.getPositionX(),this.player.getPositionY()+this.stairHeight));
-        var goL2 = cc.moveTo(this.moveDuration2,cc.p(this.player.getPositionX(),this.player.getPositionY()));
+        var goL1 = cc.moveTo(this.moveDuration2,cc.p(this.player.x,this.player.y+this.stairHeight));
+        var goL2 = cc.moveTo(this.moveDuration2,cc.p(this.player.x,this.player.y));
         var sque = cc.sequence(goL1,goL2);
         this.player.runAction(sque);
-        this.player.setScaleX(1);
+        this.player.scaleX =1;
 
         var goAction = cc.moveBy(0.2,cc.p(60,-100));
         this.nodeView.runAction(goAction);
@@ -90,11 +90,11 @@ cc.Class({
 
     playerMoveRight: function() {
         //角色跳跃的效果
-        var goR1 = cc.moveTo(this.moveDuration2,cc.p(this.player.getPositionX(),this.player.getPositionY()+this.stairHeight));
-        var goR2 = cc.moveTo(this.moveDuration2,cc.p(this.player.getPositionX(),this.player.getPositionY()));
+        var goR1 = cc.moveTo(this.moveDuration2,cc.p(this.player.x,this.player.y+this.stairHeight));
+        var goR2 = cc.moveTo(this.moveDuration2,cc.p(this.player.x,this.player.y));
         var sque = cc.sequence(goR1,goR2);
         this.player.runAction(sque);
-        this.player.setScaleX(-1);
+        this.player.scaleX = -1;
 
         var goAction = cc.moveBy(0.2,cc.p(-60,-100));
         this.nodeView.runAction(goAction);
@@ -185,15 +185,15 @@ cc.Class({
         }
 
         if (this.stairCount == 1) {
-            randX = this.player.getPositionX();
-            randY = this.player.getPositionY() - 60;
+            randX = this.player.x;
+            randY = this.player.y - 60;
         } else {
             if (isLeft) {
                 randX = this.preStairX - this.stairWidth/2;
             } else {
                 randX = this.preStairX + this.stairWidth/2;
                 if (this.stairCount == 2) {
-                    this.player.setScaleX(-1);
+                    this.player.scaleX = -1;
                 }
             }
             randY = this.preStairY + 100;

@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "08fb4a5e-78b9-4fde-aa34-16f0f029cdbd",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "GameBG": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "26778f85-96dc-4736-ad88-2a12e3a1e2d1",
       "rawTextureUuid": "08fb4a5e-78b9-4fde-aa34-16f0f029cdbd",
       "trimType": "auto",

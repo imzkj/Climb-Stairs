@@ -18,8 +18,8 @@ cc.Class({
         },
 
         bgAudio:{
-            default:null, 
-            url:cc.AudioClip                                       
+            default:null,
+            type:cc.AudioClip
         },
     },
 
